@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap(app)
 
-app.config['SQALCHEMY_DATABASE_URI'] = 'sqlite:///top-movies.db'
-app.config['SQALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///top-movies.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 API_KEY = 'e1def743d146a7aaffac7939941bf12c'
@@ -104,4 +104,4 @@ def select():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=2000)
